@@ -1,0 +1,48 @@
+<table>
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Task</th>
+            <th>Check</th>
+            <th>Done / In progress</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <td> {{ task.id }} </td>
+            <td>{{ task.name }}</td>
+            <td>
+                <input type="checkbox" name="" id="" [(ngModel)]="task.status" (change)="updateStatus(task)" />
+            </td>
+            <td *ngIf="task.status; else inProgress" style="color: rgb(11, 121, 10);">
+                Done
+            </td>
+            <td>
+                <input type="button" value="Edit" class="btnEdit btn" (click)="editTask(task.id)" />
+            </td>
+            <td>
+                <input type="button" value="Delete" class="btnDelete btn" (click)="deleteBtn(task.id)" [disabled]="!task.status" />
+            </td>
+        </tr>
+    </tbody>
+    <tfoot *ngIf="selectedTask !== null">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <input type="text" [(ngModel)]="selectedTask.name" />
+        </td>
+        <td>
+            <button (click)="saveChanges()" class="btn saveBtn">Save</button>
+        </td>
+    </tfoot>
+</table>
+
+<ng-template #inProgress>
+    <td style="color:  #d90429;">
+        In Progress
+    </td>
+</ng-template>

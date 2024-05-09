@@ -1,0 +1,59 @@
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$color_green: rgb(11, 121, 10);
+$color_white: rgb(240, 239, 239);
+$color_yellow: #EBAF17ff;
+$color_red: #d90429;
+$color-grey: rgb(214, 214, 214);
+
+
+table {
+    width: 900px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.btn {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.btnEdit {
+    background: $color_yellow;
+    color: $color_white;
+}
+
+.btnDelete {
+    background: $color_red;
+    color: $color_white;
+}
+
+.btnDelete:disabled {
+    opacity: 0.5;
+}
+
+input {
+    padding-left: 5px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+input[type="text"]{
+    outline: 1px solid $color-grey;
+
+}
+input[type="text"]:focus {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.saveBtn {
+    background: $color_green;
+    color: $color_white;
+}
+

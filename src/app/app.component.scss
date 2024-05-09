@@ -1,0 +1,62 @@
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$color_green: rgb(11, 121, 10);
+$green_olive: rgb(69, 107, 69);
+$color_white: rgb(240, 239, 239);
+$color-grey: rgb(214, 214, 214);
+$color_yellow: #EBAF17ff;
+$color_red: #d90429;
+
+
+.content {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inputPart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inputPart-add-btn {
+    background: $color_green;
+    color: $color_white;
+    
+}
+
+.inputPart-add-btn:disabled {
+    opacity: 0.6;
+}
+
+.inputTask {
+    width: 750px;
+    height: 37px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    outline: 1px solid $color-grey;
+    transition: 0.2s;
+}
+
+.inputTask:focus {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button {
+    width: 60px;
+    height: 47px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.2s;
+}
+.inputPart-delete-btn {
+    background: $color_red;
+    color: $color_white;
+}
+.inputPart-delete-btn:disabled {
+    opacity: 0.6;
+}
